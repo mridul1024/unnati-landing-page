@@ -143,7 +143,15 @@ export const Navbar = () => {
           >
             {list("left")}
           </Drawer>
-          <NavbarLogo src={logoImg} alt="logo" />
+          {/* <NavbarLogo src={logoImg} alt="logo" />
+           */}
+          <h1
+            style={{
+              color: "white",
+            }}
+          >
+            Unnati
+          </h1>
         </Box>
 
         {/* <NavbarLinksBox> */}

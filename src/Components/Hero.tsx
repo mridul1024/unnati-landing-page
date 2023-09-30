@@ -68,7 +68,7 @@ const Hero = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          filter: "blur(30px)", // Adjust the blur amount as needed
+          filter: "blur(10px)", // Adjust the blur amount as needed
           zIndex: -1, // Place it behind other content
         }}
       ></div>
