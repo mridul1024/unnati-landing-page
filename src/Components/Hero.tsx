@@ -92,7 +92,12 @@ const Hero = () => {
               }}
             >
               Welcome to{" "}
-              <span style={{ color: "white", fontWeight: "bold" }}>
+              <span
+                style={{
+                  color: "white",
+                  fontWeight: "bold",
+                }}
+              >
                 Unnati Foundation,
               </span>
             </Typography>
@@ -110,7 +115,7 @@ const Hero = () => {
                 sx={{
                   position: "absolute",
                   mt: "55px",
-                  animation: "word 18s infinite ease-in-out",
+                  animation: "word 22s infinite ease-in-out",
                   animationDelay: "0s",
                   color: "white",
                 }}
@@ -122,9 +127,9 @@ const Hero = () => {
                 className="word"
                 sx={{
                   position: "absolute",
-                  mt: "55px",
+                  mt: "65px",
 
-                  animation: "word 18s infinite ease-in-out",
+                  animation: "word 22s infinite ease-in-out",
                   animationDelay: "6s",
                   color: "white",
                 }}
@@ -138,7 +143,7 @@ const Hero = () => {
                   mt: "55px",
 
                   position: "absolute",
-                  animation: "word 18s infinite ease-in-out",
+                  animation: "word 22s infinite ease-in-out",
                   animationDelay: "12s",
                   color: "white",
                 }}
@@ -170,7 +175,7 @@ const Hero = () => {
           </Box>
 
           <Box sx={{ flex: "1.1", mt: 15 }}>
-            <Lottie loop={true} animationData={HeroAnimation} />
+            {/* <Lottie loop={true} animationData={HeroAnimation} /> */}
             {/* <img
               src={heroImg}
               alt="heroImg"

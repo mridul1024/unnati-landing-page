@@ -23,6 +23,8 @@ import {
 import { useState } from "react";
 import { LinkOffTwoTone } from "@mui/icons-material";
 
+const Naveli = ["Home", "Features", "Services", "Contact"];
+
 export const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState({
     left: false,
@@ -148,6 +150,10 @@ export const Navbar = () => {
           <h1
             style={{
               color: "white",
+              fontSize: "45px",
+              fontWeight: "bold",
+              fontFamily: "Poppins",
+              marginLeft: "58px",
             }}
           >
             Unnati
@@ -161,11 +167,18 @@ export const Navbar = () => {
           gap={2}
           sx={{ display: { xs: "none", md: "flex" } }}
         >
-          <NavLink variant="body2">Home</NavLink>
-          <NavLink variant="body2">Features</NavLink>
-          <NavLink variant="body2">Services</NavLink>
-          <NavLink variant="body2">Listed</NavLink>
-          <NavLink variant="body2">Contact</NavLink>
+          {Naveli.map((item) => {
+            return (
+              <NavLink
+                sx={{
+                  fontSize: "20px",
+                }}
+                // variant="body2"
+              >
+                {item}
+              </NavLink>
+            );
+          })}
         </Stack>
         {/* </NavbarLinksBox> */}
         {/* </Box> */}

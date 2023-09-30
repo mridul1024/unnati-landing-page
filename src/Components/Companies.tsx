@@ -24,7 +24,7 @@ const Companies = () => {
 
   return (
     <Box sx={{ mt: 10 }}>
-      <CustomContainer>
+      {/* <CustomContainer>
         <CustomBox>
           <img src={logoImg} alt="logo" style={{ maxWidth: "100%" }} />
           <Typography
@@ -54,11 +54,11 @@ const Companies = () => {
             5-Star Rating (2k+ Reviews)
           </Typography>
         </Box>
-      </CustomContainer>
+      </CustomContainer> */}
 
-      <Container sx={{ display: "flex", flexDirection: "column" }}>
+      {/* <Container sx={{ display: "flex", flexDirection: "column" }}>
         <img src={logosImg} alt="logos" />
-      </Container>
+      </Container> */}
     </Box>
   );
 };

@@ -1,16 +1,40 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, styled, keyframes, Typography } from "@mui/material";
 import React from "react";
 import bedroomsIcon from "../media/bedroomsIcon.png";
 import bathroomsIcon from "../media/bathroomsIcon.png";
 import spaceIcon from "../media/spaceIcon.png";
+
+const jiggleAnimation = keyframes`
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+`;
 
 const House = ({ img, price, address, bedrooms, bathrooms, space }: any) => {
   const HouseBox = styled(Box)(({ theme }) => ({
     borderTopLeftRadius: "10px",
     borderTopRightRadius: "10px",
     maxWidth: 350,
+    margin: "0 auto",
+    padding: theme.spacing(2),
+    boxShadow:
+      "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
     backgroundColor: "#fff",
-    margin: theme.spacing(0, 2, 0, 2),
+    border: "1px solid green",
+    transition: "transform 0.3s ease-in-out",
+    scale: 1,
+    "&:hover": {
+      transform: "scale(1.1)",
+      // animation: "$jiggle 0.3s ease-in-out infinite",
+      // animation: `${jiggleAnimation} 0.3s ease-in-out infinite`,
+    },
+
     [theme.breakpoints.down("md")]: {
       margin: theme.spacing(2, 0, 2, 0),
     },
@@ -28,19 +52,51 @@ const House = ({ img, price, address, bedrooms, bathrooms, space }: any) => {
 
   return (
     <HouseBox>
-      <ImgContainer>
+      {/* <ImgContainer>
         <img src={img} alt="housePhoto" style={{ maxWidth: "100%" }} />
-      </ImgContainer>
+      </ImgContainer> */}
+      <Box
+        style={{
+          // maxWidth: "100%",
+          width: "20em",
+          border: "2px solid red",
+          // height: "100px",
+          display: "flex",
+          // justifyContent: "space-between",
+          gap: "2em",
+          alignItems: "center",
+          padding: "10px",
+        }}
+      >
+        <Box
+          sx={{
+            height: "90px",
+            width: "90px",
+            border: "2px solid red",
+            borderRadius: "50%",
+          }}
+        ></Box>
+        <Typography variant="h5" sx={{ fontWeight: "700", fontSize: "25px" }}>
+          Name
+        </Typography>
+      </Box>
 
-      <Box sx={{ padding: "1rem" }}>
-        <Typography variant="body2" sx={{ fontWeight: "700" }}>
+      <Box sx={{ padding: "1rem", height: 300 }}>
+        <Typography>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+          delectus? Distinctio hic repellendus est incidunt iusto quae mollitia
+          dolor veniam dolorum, consequatur unde maxime ducimus laudantium.
+          Architecto explicabo tenetur ad illum ullam et, enim vero deserunt
+          modi nihil a odit?
+        </Typography>
+        {/* <Typography variant="body2" sx={{ fontWeight: "700" }}>
           ${price}
         </Typography>
         <Typography variant="body2" sx={{ my: 2 }}>
           {address}
-        </Typography>
+        </Typography> */}
 
-        <Box
+        {/* <Box
           sx={{
             display: "flex",
             alignItems: "center",
@@ -67,7 +123,7 @@ const House = ({ img, price, address, bedrooms, bathrooms, space }: any) => {
               {space}
             </Typography>
           </InfoBox>
-        </Box>
+        </Box> */}
       </Box>
     </HouseBox>
   );

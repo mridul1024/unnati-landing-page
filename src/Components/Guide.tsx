@@ -48,6 +48,7 @@ const Guide = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        mt: "14em",
       }}
     >
       <div
