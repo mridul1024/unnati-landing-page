@@ -17,17 +17,20 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Stack,
   styled,
 } from "@mui/material";
 import { useState } from "react";
 import { LinkOffTwoTone } from "@mui/icons-material";
+
+const Naveli = ["Home", "Features", "Services", "Contact"];
 
 export const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState({
     left: false,
   });
 
-  const toggleDrawer = (anchor, open) => (event) => {
+  const toggleDrawer = (anchor: any, open: any) => (event: any) => {
     if (
       event.type === "keydown" &&
       (event.type === "Tab" || event.type === "Shift")
@@ -38,7 +41,7 @@ export const Navbar = () => {
     setMobileMenu({ ...mobileMenu, [anchor]: open });
   };
 
-  const list = (anchor) => (
+  const list = (anchor: any) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
@@ -68,11 +71,17 @@ export const Navbar = () => {
 
   const NavLink = styled(Typography)(({ theme }) => ({
     fontSize: "14px",
-    color: "#4F5361",
+    // color: "#4F5361",
+    color: "white",
     fontWeight: "bold",
     cursor: "pointer",
+    border: "2px solid transparent",
+    transition: "all 0.3s ease-out",
     "&:hover": {
-      color: "#fff",
+      // color: "#fff",
+      // transform: "scale(1.2)",
+      // borderBottom: "2px solid #4F5361",
+      borderBottom: "2px solid white",
     },
   }));
 
@@ -99,6 +108,10 @@ export const Navbar = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    // background: "white",
+    // color: "white",
+    borderRadius: "0px 0px 12px 12px",
+    // height: "20px",
     padding: theme.spacing(5),
     [theme.breakpoints.down("md")]: {
       padding: theme.spacing(2),
@@ -119,6 +132,7 @@ export const Navbar = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          width: "100%",
           gap: "2.5rem",
         }}
       >
@@ -131,19 +145,46 @@ export const Navbar = () => {
           >
             {list("left")}
           </Drawer>
-          <NavbarLogo src={logoImg} alt="logo" />
+          {/* <NavbarLogo src={logoImg} alt="logo" />
+           */}
+          <h1
+            style={{
+              color: "white",
+              fontSize: "45px",
+              fontWeight: "bold",
+              fontFamily: "Poppins",
+              marginLeft: "58px",
+            }}
+          >
+            Unnati
+          </h1>
         </Box>
 
-        <NavbarLinksBox>
-          <NavLink variant="body2">Home</NavLink>
-          <NavLink variant="body2">Features</NavLink>
-          <NavLink variant="body2">Services</NavLink>
-          <NavLink variant="body2">Listed</NavLink>
-          <NavLink variant="body2">Contact</NavLink>
-        </NavbarLinksBox>
+        {/* <NavbarLinksBox> */}
+        <Box sx={{ display: "flex", flexGrow: 1 }}></Box>
+        <Stack
+          direction={"row"}
+          gap={2}
+          sx={{ display: { xs: "none", md: "flex" } }}
+        >
+          {Naveli.map((item) => {
+            return (
+              <NavLink
+                sx={{
+                  fontSize: "20px",
+                }}
+                // variant="body2"
+              >
+                {item}
+              </NavLink>
+            );
+          })}
+        </Stack>
+        {/* </NavbarLinksBox> */}
+        {/* </Box> */}
       </Box>
 
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           alignItems: "center",
@@ -157,7 +198,7 @@ export const Navbar = () => {
           color="#fff"
           buttonText="Register"
         />
-      </Box>
+      </Box> */}
     </NavbarContainer>
   );
 };
