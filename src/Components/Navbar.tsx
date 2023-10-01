@@ -9,6 +9,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import logoImg from "../media/logo.png";
 import { Container } from "@mui/system";
+import UnnatiLogo from "../media/unnati_logo.svg";
 import CustomButton from "./CustomButton";
 import {
   Drawer,
@@ -71,8 +72,8 @@ export const Navbar = () => {
 
   const NavLink = styled(Typography)(({ theme }) => ({
     fontSize: "14px",
-    // color: "#4F5361",
-    color: "white",
+    color: "#4F5361",
+    // color: "white",
     fontWeight: "bold",
     cursor: "pointer",
     border: "2px solid transparent",
@@ -80,8 +81,8 @@ export const Navbar = () => {
     "&:hover": {
       // color: "#fff",
       // transform: "scale(1.2)",
-      // borderBottom: "2px solid #4F5361",
-      borderBottom: "2px solid white",
+      borderBottom: "2px solid #4F5361",
+      // borderBottom: "2px solid white",
     },
   }));
 
@@ -147,7 +148,7 @@ export const Navbar = () => {
           </Drawer>
           {/* <NavbarLogo src={logoImg} alt="logo" />
            */}
-          <h1
+          {/* <h1
             style={{
               color: "white",
               fontSize: "45px",
@@ -157,7 +158,8 @@ export const Navbar = () => {
             }}
           >
             Unnati
-          </h1>
+          </h1> */}
+          <img src={UnnatiLogo} alt="heroImg" style={{ width: "10rem" }} />
         </Box>
 
         {/* <NavbarLinksBox> */}

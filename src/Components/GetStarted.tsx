@@ -1,4 +1,4 @@
-import { Button, styled, Typography } from "@mui/material";
+import { Button, Stack, styled, TextField, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
 import homeIllustration from "../media/illustration.png";
@@ -36,18 +36,50 @@ const GetStarted = () => {
           <Typography
             sx={{ fontSize: "35px", color: "white", fontWeight: "700" }}
           >
-            Featured Properties
+            Get in touch with us!
           </Typography>
+          <Stack gap={1} direction={"column"} my={1} mb={3}>
+            <TextField
+              fullWidth
+              // label="fullWidth"
+              sx={{
+                background: "white",
+                borderRadius: "12px",
+                "& fieldset": { border: "none" },
+                // my: 1,
+              }}
+              multiline
+              placeholder="Email"
+              id="fullWidth"
+              InputLabelProps={{ shrink: true }}
+            />
+            <TextField
+              fullWidth
+              // label="fullWidth"
+              sx={{
+                background: "white",
+                borderRadius: "12px",
+                "& fieldset": { border: "none" },
+                // my: 1,
+              }}
+              multiline
+              placeholder="Write your message here"
+              id="fullWidth"
+              InputLabelProps={{ shrink: true }}
+            />
+          </Stack>
+
+          {/*           
           <Typography
             sx={{ fontSize: "16px", color: "#ccc", fontWeight: "500", my: 3 }}
           >
             Everything you need to know about houses!
-          </Typography>
+          </Typography> */}
 
           <CustomButton
             backgroundColor="#fff"
             color="#17275F"
-            buttonText="Get Started Now"
+            buttonText="Send Email"
             getStartedBtn={true}
           />
         </Box>
