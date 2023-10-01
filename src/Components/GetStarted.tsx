@@ -3,6 +3,7 @@ import { Box, Container } from "@mui/system";
 import React from "react";
 import homeIllustration from "../media/illustration.png";
 import CustomButton from "./CustomButton";
+import emailjs from "@emailjs/browser";
 
 const GetStarted = () => {
   const CustomContainer = styled(Container)(({ theme }) => ({
@@ -80,6 +81,27 @@ const GetStarted = () => {
             backgroundColor="#fff"
             color="#17275F"
             buttonText="Send Email"
+            onClick={async () => {
+              console.log("clicked", { emailjs });
+              var templateParams = {
+                to_name: "Hehe",
+                from_name: "huihui",
+                message: "khekhe",
+              };
+
+              await emailjs.init("8j6wIKXsktFNg8t79");
+
+              emailjs
+                .send("service_68gs3f9", "template_2ecgibu", templateParams)
+                .then(
+                  function (response: any) {
+                    console.log("SUCCESS!", response.status, response.text);
+                  },
+                  function (error: any) {
+                    console.log("FAILED...", error);
+                  }
+                );
+            }}
             getStartedBtn={true}
           />
         </Box>

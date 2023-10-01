@@ -40,7 +40,7 @@ const Footer = () => {
     <Box sx={{ py: 10 }}>
       <CustomContainer>
         <CustomContainer>
-          <Box>
+          {/* <Box>
             <Typography
               sx={{
                 fontSize: "20px",
@@ -59,7 +59,7 @@ const Footer = () => {
             <FooterLink>Agents</FooterLink>
             <br />
             <FooterLink>Blog</FooterLink>
-          </Box>
+          </Box> */}
 
           <Box>
             <Typography
@@ -112,7 +112,7 @@ const Footer = () => {
                 mb: 2,
               }}
             >
-              Get in touch
+              Follow Us
             </Typography>
 
             <Typography
@@ -123,7 +123,7 @@ const Footer = () => {
                 mb: 2,
               }}
             >
-              You’ll find your next home, in any style you prefer.
+              Be sure to follow us through our journey.
             </Typography>
 
             <IconBox>

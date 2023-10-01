@@ -18,15 +18,18 @@ const jiggleAnimation = keyframes`
 
 const House = ({ img, price, address, bedrooms, bathrooms, space }: any) => {
   const HouseBox = styled(Box)(({ theme }) => ({
-    borderTopLeftRadius: "10px",
-    borderTopRightRadius: "10px",
+    // borderTopLeftRadius: "10px",
+    // borderTopRightRadius: "10px",
+    borderRadius: "12px",
     maxWidth: 350,
     margin: "0 auto",
     padding: theme.spacing(2),
-    boxShadow:
-      "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    WebkitBoxShadow: "0px 0px 14px 0px rgba(0, 0, 0, 0.1)",
+    boxShadow: "0px 0px 14px 0px rgba(0, 0, 0, 0.1)",
+    // boxShadow:
+    //   "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
     backgroundColor: "#fff",
-    border: "1px solid green",
+    // border: "1px solid green",
     transition: "transform 0.3s ease-in-out",
     scale: 1,
     "&:hover": {
@@ -59,7 +62,7 @@ const House = ({ img, price, address, bedrooms, bathrooms, space }: any) => {
         style={{
           // maxWidth: "100%",
           width: "20em",
-          border: "2px solid red",
+          // border: "2px solid red",
           // height: "100px",
           display: "flex",
           // justifyContent: "space-between",

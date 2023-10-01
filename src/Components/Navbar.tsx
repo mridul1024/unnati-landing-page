@@ -159,7 +159,11 @@ export const Navbar = () => {
           >
             Unnati
           </h1> */}
-          <img src={UnnatiLogo} alt="heroImg" style={{ width: "10rem" }} />
+          <NavbarLogo
+            src={UnnatiLogo}
+            alt="heroImg"
+            style={{ width: "10rem" }}
+          />
         </Box>
 
         {/* <NavbarLinksBox> */}

@@ -104,21 +104,25 @@ const Hero = () => {
                 Unnati Foundation,
               </span>
             </Typography>
-            <div
+            <Box
               className="morhping"
-              style={
-                {
-                  // position: "relative",
-                  // marginTop: "0px",
-                  // filter: "contrast(05) ",
-                }
-              }
+              sx={{
+                flex: 1,
+              }}
+              // style={
+              //   {
+              //     // position: "relative",
+              //     // marginTop: "0px",
+              //     // filter: "contrast(05) ",
+              //   }
+              // }
             >
               <Title
                 variant="h1"
                 className="word"
                 sx={{
                   position: "absolute",
+                  textAlign: "center",
                   mt: "55px",
                   animation: "word 9s infinite ease-in-out",
                   animationDelay: "0s",
@@ -137,6 +141,9 @@ const Hero = () => {
 
                   animation: "word 9s infinite ease-in-out",
                   animationDelay: "3s",
+                  flexWrap: "wrap",
+                  textAlign: "center",
+
                   // color: "#687690",
                 }}
               >
@@ -147,16 +154,19 @@ const Hero = () => {
                 className="word"
                 sx={{
                   mt: "55px",
+                  textAlign: "center",
 
                   position: "absolute",
                   animation: "word 9s infinite ease-in-out",
                   animationDelay: "6s",
+                  flexWrap: "wrap",
+
                   // color: "#687690",
                 }}
               >
                 Passion for possibilities.
               </Title>
-            </div>
+            </Box>
             <Typography
               variant="body2"
               sx={{
@@ -180,7 +190,13 @@ const Hero = () => {
             />
           </Box>
 
-          <Box sx={{ flex: "1", ml: 30 }}>
+          <Box
+            sx={{
+              flex: "1",
+              ml: 30,
+              display: { md: "block", sm: "none", xs: "none" },
+            }}
+          >
             <Lottie loop={true} animationData={HeroAnimation} />
             {/* <img
               src={backgroundImage}
