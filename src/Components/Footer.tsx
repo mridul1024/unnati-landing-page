@@ -20,6 +20,7 @@ const Footer = () => {
   const IconBox = styled(Box)(({ theme }) => ({
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
     gap: "1rem",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
@@ -61,8 +62,8 @@ const Footer = () => {
             <FooterLink>Blog</FooterLink>
           </Box> */}
 
-          <Box>
-            <Typography
+          {/* <Box> */}
+          {/* <Typography
               sx={{
                 fontSize: "20px",
                 color: "#1C1C1D",
@@ -80,9 +81,9 @@ const Footer = () => {
             <FooterLink>Video</FooterLink>
             <br />
             <FooterLink>Free Trial</FooterLink>
-          </Box>
+          </Box> */}
 
-          <Box>
+          {/* <Box>
             <Typography
               sx={{
                 fontSize: "20px",
@@ -101,7 +102,7 @@ const Footer = () => {
             <FooterLink>Privacy</FooterLink>
             <br />
             <FooterLink>Sitemap</FooterLink>
-          </Box>
+          </Box> */}
 
           <Box>
             <Typography
@@ -121,6 +122,7 @@ const Footer = () => {
                 color: "#7A7A7E",
                 fontWeight: "500",
                 mb: 2,
+                textAlign: "center",
               }}
             >
               Be sure to follow us through our journey.

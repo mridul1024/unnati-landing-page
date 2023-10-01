@@ -2,6 +2,7 @@ import { Box, Container, styled, Typography } from "@mui/material";
 import React from "react";
 import House from "./House";
 import { properties } from "../properties";
+import { visionStatements } from "../../Founder";
 
 const Properties = () => {
   const PropertiesBox = styled(Box)(({ theme }) => ({
@@ -89,15 +90,11 @@ const Properties = () => {
         </Box>
 
         <PropertiesBox gap={4}>
-          {properties.map((property) => (
+          {visionStatements.map((property) => (
             <House
-              key={property.id}
               img={property.img}
-              price={property.price}
-              address={property.address}
-              bedrooms={property.bedrooms}
-              bathrooms={property.bathrooms}
-              space={property.space}
+              name={property.name}
+              vision={property.vision}
             />
           ))}
         </PropertiesBox>

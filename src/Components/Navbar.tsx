@@ -1,4 +1,3 @@
-import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -7,10 +6,8 @@ import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import HomeIcon from "@mui/icons-material/Home";
 import ContactsIcon from "@mui/icons-material/Contacts";
-import logoImg from "../media/logo.png";
 import { Container } from "@mui/system";
 import UnnatiLogo from "../media/unnati_logo.svg";
-import CustomButton from "./CustomButton";
 import {
   Drawer,
   List,
@@ -22,9 +19,8 @@ import {
   styled,
 } from "@mui/material";
 import { useState } from "react";
-import { LinkOffTwoTone } from "@mui/icons-material";
 
-const Naveli = ["Home", "Features", "Services", "Contact"];
+const Naveli = ["Home", "About", "Contact", "Events"];
 
 export const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState({
@@ -50,22 +46,20 @@ export const Navbar = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Home", "Features", "Services", "Listed", "Contact"].map(
-          (text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index === 0 && <HomeIcon />}
-                  {index === 1 && <FeaturedPlayListIcon />}
-                  {index === 2 && <MiscellaneousServicesIcon />}
-                  {index === 3 && <ListAltIcon />}
-                  {index === 4 && <ContactsIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          )
-        )}
+        {["Home", "About", "Contact", "Events"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index === 0 && <HomeIcon />}
+                {index === 1 && <FeaturedPlayListIcon />}
+                {index === 2 && <ContactsIcon />}
+                {index === 3 && <MiscellaneousServicesIcon />}
+                {index === 4 && <ListAltIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
       </List>
     </Box>
   );
@@ -79,10 +73,7 @@ export const Navbar = () => {
     border: "2px solid transparent",
     transition: "all 0.3s ease-out",
     "&:hover": {
-      // color: "#fff",
-      // transform: "scale(1.2)",
       borderBottom: "2px solid #4F5361",
-      // borderBottom: "2px solid white",
     },
   }));
 
@@ -146,19 +137,7 @@ export const Navbar = () => {
           >
             {list("left")}
           </Drawer>
-          {/* <NavbarLogo src={logoImg} alt="logo" />
-           */}
-          {/* <h1
-            style={{
-              color: "white",
-              fontSize: "45px",
-              fontWeight: "bold",
-              fontFamily: "Poppins",
-              marginLeft: "58px",
-            }}
-          >
-            Unnati
-          </h1> */}
+
           <NavbarLogo
             src={UnnatiLogo}
             alt="heroImg"
@@ -166,7 +145,6 @@ export const Navbar = () => {
           />
         </Box>
 
-        {/* <NavbarLinksBox> */}
         <Box sx={{ display: "flex", flexGrow: 1 }}></Box>
         <Stack
           direction={"row"}
@@ -179,32 +157,13 @@ export const Navbar = () => {
                 sx={{
                   fontSize: "20px",
                 }}
-                // variant="body2"
               >
                 {item}
               </NavLink>
             );
           })}
         </Stack>
-        {/* </NavbarLinksBox> */}
-        {/* </Box> */}
       </Box>
-
-      {/* <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "1rem",
-        }}
-      >
-        <NavLink variant="body2">Sign Up</NavLink>
-        <CustomButton
-          backgroundColor="#0F1B4C"
-          color="#fff"
-          buttonText="Register"
-        />
-      </Box> */}
     </NavbarContainer>
   );
 };

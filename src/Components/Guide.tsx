@@ -1,9 +1,9 @@
 import { Box, Button, styled, Typography } from "@mui/material";
 import React from "react";
 
-import buyIcon from "../media/buy_icon.png";
-import sellIcon from "../media/sell_icon.png";
-import rentIcon from "../media/rent_icon.png";
+import edu from "../assets/img/undraw-edu.svg";
+import deve from "../assets/img/deve.svg";
+import gar from "../assets/img/gar.svg";
 
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import CustomButton from "./CustomButton";
@@ -48,7 +48,7 @@ const Guide = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        mt: "14em",
+        // mt: "14em",
       }}
     >
       <div
@@ -62,9 +62,9 @@ const Guide = () => {
 
       <Typography
         variant="h3"
-        sx={{ fontSize: "35px", fontWeight: "bold", color: "#000339", my: 3 }}
+        sx={{ fontSize: "30px", fontWeight: "bold", color: "#000339", my: 3 }}
       >
-        How it works?
+        What we aim to achieve ?
       </Typography>
 
       <CustomBox>
@@ -77,24 +77,31 @@ const Guide = () => {
             textAlign: "center",
           }}
         >
-          Everything you need to know when you want to buy, rent or sell - All
-          in one place
+          Empowering through nursing education, rural education advancement, and
+          healthcare awareness, fostering growth and well-being in communities,
+          both urban and rural.
         </Typography>
       </CustomBox>
 
       <GuidesBox>
         <GuideBox>
-          <img src={buyIcon} alt="buyIcon" />
+          <img
+            src={edu}
+            style={{
+              height: "90px",
+            }}
+            alt="buyIcon"
+          />
           <Typography
             variant="body2"
             sx={{
               fontWeight: "500",
-              fontSize: "20px",
+              fontSize: "16px",
               color: "#3B3c45",
               my: 1,
             }}
           >
-            Buying Guides
+            Nursing Education and Training:
           </Typography>
           <Box
             sx={{
@@ -104,28 +111,34 @@ const Guide = () => {
               alignItems: "center",
             }}
           >
-            <Typography
+            {/* <Typography
               variant="body2"
               sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF" }}
             >
-              How to buy
+              sfd
             </Typography>
-            <ArrowRightAltIcon style={{ color: "#0689FF" }} />
+            <ArrowRightAltIcon style={{ color: "#0689FF" }} /> */}
           </Box>
         </GuideBox>
 
         <GuideBox>
-          <img src={rentIcon} alt="buyIcon" />
+          <img
+            src={gar}
+            style={{
+              height: "90px",
+            }}
+            alt=" Development and Awareness"
+          />
           <Typography
             variant="body2"
             sx={{
               fontWeight: "500",
-              fontSize: "20px",
+              fontSize: "16px",
               color: "#3B3c45",
               my: 1,
             }}
           >
-            Renting Guides
+            Community Development and Awareness:
           </Typography>
           <Box
             sx={{
@@ -135,28 +148,34 @@ const Guide = () => {
               alignItems: "center",
             }}
           >
-            <Typography
+            {/* <Typography
               variant="body2"
               sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF" }}
             >
               How to rent
             </Typography>
-            <ArrowRightAltIcon style={{ color: "#0689FF" }} />
+            <ArrowRightAltIcon style={{ color: "#0689FF" }} /> */}
           </Box>
         </GuideBox>
 
         <GuideBox>
-          <img src={sellIcon} alt="buyIcon" />
+          <img
+            src={deve}
+            alt="buyIcon"
+            style={{
+              height: "90px",
+            }}
+          />
           <Typography
             variant="body2"
             sx={{
               fontWeight: "500",
-              fontSize: "20px",
+              fontSize: "16px",
               color: "#3B3c45",
               my: 1,
             }}
           >
-            Selling Guides
+            Rural Education Promotion:
           </Typography>
           <Box
             sx={{
@@ -166,13 +185,13 @@ const Guide = () => {
               alignItems: "center",
             }}
           >
-            <Typography
+            {/* <Typography
               variant="body2"
               sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF" }}
             >
               How to sell
             </Typography>
-            <ArrowRightAltIcon style={{ color: "#0689FF" }} />
+            <ArrowRightAltIcon style={{ color: "#0689FF" }} /> */}
           </Box>
         </GuideBox>
       </GuidesBox>

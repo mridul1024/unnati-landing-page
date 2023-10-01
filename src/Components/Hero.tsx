@@ -59,7 +59,7 @@ const Hero = () => {
       sx={{
         // ...backgroundStyle,
         backgroundColor: "#E6F0FF",
-        minHeight: "80vh",
+        minHeight: "90vh",
         overflow: "hidden",
       }}
     >
