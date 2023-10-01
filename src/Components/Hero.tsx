@@ -120,7 +120,7 @@ const Hero = () => {
                 sx={{
                   position: "absolute",
                   mt: "55px",
-                  animation: "word 22s infinite ease-in-out",
+                  animation: "word 9s infinite ease-in-out",
                   animationDelay: "0s",
                   flexWrap: "wrap",
                   // color: "#687690",
@@ -135,8 +135,8 @@ const Hero = () => {
                   position: "absolute",
                   mt: "65px",
 
-                  animation: "word 22s infinite ease-in-out",
-                  animationDelay: "6s",
+                  animation: "word 9s infinite ease-in-out",
+                  animationDelay: "3s",
                   // color: "#687690",
                 }}
               >
@@ -149,8 +149,8 @@ const Hero = () => {
                   mt: "55px",
 
                   position: "absolute",
-                  animation: "word 22s infinite ease-in-out",
-                  animationDelay: "12s",
+                  animation: "word 9s infinite ease-in-out",
+                  animationDelay: "6s",
                   // color: "#687690",
                 }}
               >
