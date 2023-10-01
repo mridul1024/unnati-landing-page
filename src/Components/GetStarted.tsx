@@ -106,11 +106,18 @@ const GetStarted = () => {
           />
         </Box>
 
-        <img
-          src={homeIllustration}
-          alt="illustration"
-          style={{ maxWidth: "100%" }}
-        />
+        <Box
+          sx={{
+            display: { md: "block", sm: "none", xs: "none" },
+            m: { sx: 4 },
+          }}
+        >
+          <img
+            src={homeIllustration}
+            alt="illustration"
+            style={{ maxWidth: "100%" }}
+          />
+        </Box>
       </CustomContainer>
     </CustomBox>
   );
