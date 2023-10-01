@@ -2,7 +2,7 @@ import { Box, Button, styled, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
 import Navbar from "./Navbar";
-import HeroAnimation from "../animation/hero_animation.json";
+import HeroAnimation from "../animation/hero_animation_shooting_blob.json";
 
 import heroImg from "../media/hero_illustration_girls.png";
 import backgroundImage from "../media/hero_background_dark.jpeg";
@@ -39,7 +39,7 @@ const Hero = () => {
         opacity: 1,
       },
       "20%, 80%": {
-        filter: "blur(1em)",
+        filter: "blur(5px)",
         opacity: 0,
         color: "#687690",
       },
@@ -180,8 +180,8 @@ const Hero = () => {
             />
           </Box>
 
-          <Box sx={{ flex: "1.1", mt: 15 }}>
-            {/* <Lottie loop={true} animationData={HeroAnimation} /> */}
+          <Box sx={{ flex: "1", ml: 30 }}>
+            <Lottie loop={true} animationData={HeroAnimation} />
             {/* <img
               src={backgroundImage}
               alt="heroImg"
