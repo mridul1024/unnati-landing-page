@@ -162,7 +162,7 @@ const Hero = () => {
                 my: 4,
               }}
             >
-              where passion fuels possibilities for women to soar.
+              Fostering boundless opportunities and innovation for all.
             </Typography>
             <Box sx={{ height: "160px" }}></Box>
             <CustomButton
