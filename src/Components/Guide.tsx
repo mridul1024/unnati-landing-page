@@ -1,4 +1,4 @@
-import { Box, Button, styled, Typography } from "@mui/material";
+import { Box, Button, styled, Typography, Stack } from "@mui/material";
 import React from "react";
 
 import edu from "../assets/img/undraw-edu.svg";
@@ -6,6 +6,7 @@ import deve from "../assets/img/deve.svg";
 import gar from "../assets/img/gar.svg";
 
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import SouthIcon from "@mui/icons-material/South";
 import CustomButton from "./CustomButton";
 
 const Guide = () => {
@@ -42,167 +43,198 @@ const Guide = () => {
   }));
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        // mt: "14em",
-      }}
-    >
-      <div
-        style={{
-          width: "5%",
-          height: "5px",
-          backgroundColor: "#000339",
-          margin: "0 auto",
+    <>
+      <Box
+        sx={{
+          // width: "100vw",
+          textAlign: "center",
+          height: "5rem",
+          mt: 4,
+          mb: 10,
+          "@keyframes arrow": {
+            "0%": {
+              opacity: 1,
+            },
+            "50%": {
+              // filter: "blur(5px)",
+              opacity: 0,
+              // color: "#687690",
+            },
+            "100%": {
+              opacity: 1,
+            },
+          },
         }}
-      ></div>
-
-      <Typography
-        variant="h3"
-        sx={{ fontSize: "30px", fontWeight: "bold", color: "#000339", my: 3 }}
       >
-        What we aim to achieve ?
-      </Typography>
-
-      <CustomBox>
-        <Typography
-          variant="body2"
+        <SouthIcon
           sx={{
-            fontSize: "16px",
-            fontWeight: "500",
-            color: "#5A6473",
-            textAlign: "center",
+            fontSize: "4rem",
+            animation: "arrow 2s infinite ease-in-out",
           }}
-        >
-          Empowering through nursing education, rural education advancement, and
-          healthcare awareness, fostering growth and well-being in communities,
-          both urban and rural.
-        </Typography>
-      </CustomBox>
+        />
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          // mt: "14em",
+        }}
+      >
+        <div
+          style={{
+            width: "5%",
+            height: "5px",
 
-      <GuidesBox>
-        <GuideBox>
-          <img
-            src={edu}
-            style={{
-              height: "90px",
-            }}
-            alt="buyIcon"
-          />
+            backgroundColor: "#000339",
+            margin: "0 auto",
+          }}
+        ></div>
+        <Typography
+          variant="h3"
+          sx={{ fontSize: "30px", fontWeight: "bold", color: "#000339", my: 3 }}
+        >
+          What we aim to achieve ?
+        </Typography>
+
+        <CustomBox>
           <Typography
             variant="body2"
             sx={{
-              fontWeight: "500",
               fontSize: "16px",
-              color: "#3B3c45",
-              my: 1,
+              fontWeight: "500",
+              color: "#5A6473",
+              textAlign: "center",
             }}
           >
-            Nursing Education and Training:
+            Empowering through nursing education, rural education advancement,
+            and healthcare awareness, fostering growth and well-being in
+            communities, both urban and rural.
           </Typography>
-          <Box
-            sx={{
-              cursor: "pointer",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            {/* <Typography
+        </CustomBox>
+
+        <GuidesBox>
+          <GuideBox>
+            <img
+              src={edu}
+              style={{
+                height: "90px",
+              }}
+              alt="buyIcon"
+            />
+            <Typography
+              variant="body2"
+              sx={{
+                fontWeight: "500",
+                fontSize: "16px",
+                color: "#3B3c45",
+                my: 1,
+              }}
+            >
+              Nursing Education and Training:
+            </Typography>
+            <Box
+              sx={{
+                cursor: "pointer",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* <Typography
               variant="body2"
               sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF" }}
             >
-              sfd
+            sfd
             </Typography>
             <ArrowRightAltIcon style={{ color: "#0689FF" }} /> */}
-          </Box>
-        </GuideBox>
+            </Box>
+          </GuideBox>
 
-        <GuideBox>
-          <img
-            src={gar}
-            style={{
-              height: "90px",
-            }}
-            alt=" Development and Awareness"
-          />
-          <Typography
-            variant="body2"
-            sx={{
-              fontWeight: "500",
-              fontSize: "16px",
-              color: "#3B3c45",
-              my: 1,
-            }}
-          >
-            Community Development and Awareness:
-          </Typography>
-          <Box
-            sx={{
-              cursor: "pointer",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            {/* <Typography
+          <GuideBox>
+            <img
+              src={gar}
+              style={{
+                height: "90px",
+              }}
+              alt=" Development and Awareness"
+            />
+            <Typography
+              variant="body2"
+              sx={{
+                fontWeight: "500",
+                fontSize: "16px",
+                color: "#3B3c45",
+                my: 1,
+              }}
+            >
+              Community Development and Awareness:
+            </Typography>
+            <Box
+              sx={{
+                cursor: "pointer",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* <Typography
               variant="body2"
               sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF" }}
             >
               How to rent
             </Typography>
             <ArrowRightAltIcon style={{ color: "#0689FF" }} /> */}
-          </Box>
-        </GuideBox>
+            </Box>
+          </GuideBox>
 
-        <GuideBox>
-          <img
-            src={deve}
-            alt="buyIcon"
-            style={{
-              height: "90px",
-            }}
-          />
-          <Typography
-            variant="body2"
-            sx={{
-              fontWeight: "500",
-              fontSize: "16px",
-              color: "#3B3c45",
-              my: 1,
-            }}
-          >
-            Rural Education Promotion:
-          </Typography>
-          <Box
-            sx={{
-              cursor: "pointer",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            {/* <Typography
+          <GuideBox>
+            <img
+              src={deve}
+              alt="buyIcon"
+              style={{
+                height: "90px",
+              }}
+            />
+            <Typography
+              variant="body2"
+              sx={{
+                fontWeight: "500",
+                fontSize: "16px",
+                color: "#3B3c45",
+                my: 1,
+              }}
+            >
+              Rural Education Promotion:
+            </Typography>
+            <Box
+              sx={{
+                cursor: "pointer",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* <Typography
               variant="body2"
               sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF" }}
-            >
+              >
               How to sell
             </Typography>
             <ArrowRightAltIcon style={{ color: "#0689FF" }} /> */}
-          </Box>
-        </GuideBox>
-      </GuidesBox>
+            </Box>
+          </GuideBox>
+        </GuidesBox>
 
-      <CustomButton
-        backgroundColor="#0F1B4C"
-        color="#fff"
-        buttonText="See Full Guides"
-        guideBtn={true}
-      />
-    </Box>
+        <CustomButton
+          backgroundColor="#0F1B4C"
+          color="#fff"
+          buttonText="See Full Guides"
+          guideBtn={true}
+        />
+      </Box>
+    </>
   );
 };
 

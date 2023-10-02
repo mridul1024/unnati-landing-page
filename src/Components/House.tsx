@@ -41,9 +41,9 @@ const House = ({ img, vision, name }: IProps) => {
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
 
     // border: "1px solid green",
-    height: "24em",
+    height: "26em",
 
-    transition: "transform 0.3s ease-in-out",
+    transition: "all 0.3s ease-in-out",
     scale: 1,
     "&:hover": {
       transform: "scale(1.1)",
@@ -86,19 +86,20 @@ const House = ({ img, vision, name }: IProps) => {
           // border: "2px solid red",
           // height: "100px",
           display: "flex",
+          justifyContent: "center",
           // justifyContent: "space-between",
-          borderBottom: "2px solid blue",
+          // borderBottom: "2px solid blue",
           gap: "2em",
           alignItems: "center",
           padding: "10px",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+          // boxShadow: "0 4px 8px rgba(0, 0, 0, 0.05)",
           borderRadius: "12px",
         }}
       >
         <Box
           sx={{
-            height: "90px",
-            width: "90px",
+            height: "100px",
+            width: "100px",
           }}
         >
           <ImgContainer>
@@ -109,9 +110,23 @@ const House = ({ img, vision, name }: IProps) => {
             />
           </ImgContainer>
         </Box>
-        <Typography variant="h5" sx={{ fontWeight: "700", fontSize: "20px" }}>
+
+        {/* <Typography variant="h5" sx={{ fontWeight: "700", fontSize: "20px" }}>
           {name}
-        </Typography>
+        </Typography> */}
+      </Box>
+      <Box sx={{ mt: 2 }}>
+        <Divider
+          variant="middle"
+          textAlign="center"
+          sx={{
+            fontWeight: "bold",
+            textTransform: "uppercase",
+            letterSpacing: "0.8px",
+          }}
+        >
+          {name}
+        </Divider>
       </Box>
       {/* <Box
         sx={{

@@ -7,7 +7,7 @@ export const visionStatements = [
   },
   {
     img: " https://randomuser.me/api/portraits/women/2.jpg",
-    name: "Dr.Binoyjyoti das ",
+    name: "Dr. Binoyjyoti das ",
     founder: "woman",
     vision:
       "Empowering women through affordable nursing education and fostering innovation. Bridging the healthcare gap in rural areas, promoting research, and creating self-sufficient, skilled individuals committed to community welfare.",

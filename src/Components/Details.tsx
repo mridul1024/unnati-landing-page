@@ -41,7 +41,12 @@ const Details = () => {
             <img
               src={houseCard}
               alt="house"
-              style={{ maxWidth: "100%", height: "20em", borderRadius: "30px" }}
+              style={{
+                maxWidth: "100%",
+                height: "20em",
+                borderRadius: "30px",
+                objectFit: "cover",
+              }}
             />
           </ImgContainer>
 
