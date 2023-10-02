@@ -5,7 +5,6 @@ import deve from "../assets/img/deve.svg";
 import gar from "../assets/img/gar.svg";
 
 import SouthIcon from "@mui/icons-material/South";
-import CustomButton from "./CustomButton";
 
 const Guide = () => {
   const CustomBox = styled(Box)(({ theme }) => ({

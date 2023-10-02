@@ -49,7 +49,23 @@ export const Navbar = ({ Naveli, navpath }: any) => {
       <List>
         {["Home", "About", "Contact", "Events"].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton
+              onClick={() => {
+                if (text === "About") {
+                  const element = document.getElementById("about-us");
+
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                } else if (text === "Contact") {
+                  const element = document.getElementById("contact-us");
+
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                } else navigate(navpath[index]);
+              }}
+            >
               <ListItemIcon>
                 {index === 0 && <HomeIcon />}
                 {index === 1 && <FeaturedPlayListIcon />}

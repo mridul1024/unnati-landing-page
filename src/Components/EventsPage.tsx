@@ -24,29 +24,6 @@ const EventsPage = () => {
     },
   }));
 
-  const Title = styled(Typography)(({ theme }) => ({
-    fontSize: "64px",
-    color: "#687690",
-    fontWeight: "bold",
-    margin: theme.spacing(4, 0, 4, 0),
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "40px",
-    },
-    opacity: 0,
-    "@keyframes word": {
-      "0%, 100%": {
-        filter: "blur(0px)",
-        color: "#687690",
-        opacity: 1,
-      },
-      "20%, 80%": {
-        filter: "blur(5px)",
-        opacity: 0,
-        color: "#687690",
-      },
-    },
-  }));
-
   return (
     <Box
       sx={{
