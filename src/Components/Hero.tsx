@@ -2,12 +2,13 @@ import { Box, Button, styled, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
 import Navbar from "./Navbar";
-import HeroAnimation from "../animation/hero_animation.json";
+import HeroAnimation from "../animation/hero_animation_shooting_blob.json";
 
 import heroImg from "../media/hero_illustration_girls.png";
 import backgroundImage from "../media/hero_background_dark.jpeg";
 import CustomButton from "./CustomButton";
 import Lottie from "lottie-react";
+import UnnatiLogo from "../media/unnati_logo.svg";
 
 const Hero = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
@@ -24,7 +25,7 @@ const Hero = () => {
 
   const Title = styled(Typography)(({ theme }) => ({
     fontSize: "64px",
-    color: "#000336",
+    color: "#687690",
     fontWeight: "bold",
     margin: theme.spacing(4, 0, 4, 0),
     [theme.breakpoints.down("sm")]: {
@@ -34,11 +35,13 @@ const Hero = () => {
     "@keyframes word": {
       "0%, 100%": {
         filter: "blur(0px)",
+        color: "#687690",
         opacity: 1,
       },
       "20%, 80%": {
-        filter: "blur(1em)",
+        filter: "blur(5px)",
         opacity: 0,
+        color: "#687690",
       },
     },
   }));
@@ -55,14 +58,14 @@ const Hero = () => {
     <Box
       sx={{
         // ...backgroundStyle,
-        // backgroundColor: "#E6F0FF",
+        backgroundColor: "#E6F0FF",
         minHeight: "80vh",
         overflow: "hidden",
       }}
     >
       <div
         style={{
-          ...backgroundStyle, // Include background image styles here
+          // ...backgroundStyle, // Include background image styles here
           position: "absolute",
           top: 0,
           left: 0,
@@ -84,40 +87,47 @@ const Hero = () => {
               variant="body2"
               sx={{
                 fontSize: "34px",
-                // color: "#687690",
-                color: "white",
+                color: "#687690",
+                // color: "white",
                 fontWeight: "500",
-                mt: 10,
+                mt: 6,
                 mb: 4,
               }}
             >
               Welcome to{" "}
               <span
                 style={{
-                  color: "white",
+                  color: "#687690",
                   fontWeight: "bold",
                 }}
               >
                 Unnati Foundation,
               </span>
             </Typography>
-            <div
+            <Box
               className="morhping"
-              style={{
-                // position: "relative",
-                // marginTop: "0px",
-                filter: "contrast(25) ",
+              sx={{
+                flex: 1,
               }}
+              // style={
+              //   {
+              //     // position: "relative",
+              //     // marginTop: "0px",
+              //     // filter: "contrast(05) ",
+              //   }
+              // }
             >
               <Title
                 variant="h1"
                 className="word"
                 sx={{
                   position: "absolute",
+                  textAlign: "center",
                   mt: "55px",
-                  animation: "word 22s infinite ease-in-out",
+                  animation: "word 9s infinite ease-in-out",
                   animationDelay: "0s",
-                  color: "white",
+                  flexWrap: "wrap",
+                  // color: "#687690",
                 }}
               >
                 एक जुनून संभावनाओं का!
@@ -129,9 +139,12 @@ const Hero = () => {
                   position: "absolute",
                   mt: "65px",
 
-                  animation: "word 22s infinite ease-in-out",
-                  animationDelay: "6s",
-                  color: "white",
+                  animation: "word 9s infinite ease-in-out",
+                  animationDelay: "3s",
+                  flexWrap: "wrap",
+                  textAlign: "center",
+
+                  // color: "#687690",
                 }}
               >
                 এটি অনুৰাগ সম্ভাবনাৰ
@@ -141,45 +154,61 @@ const Hero = () => {
                 className="word"
                 sx={{
                   mt: "55px",
+                  textAlign: "center",
 
                   position: "absolute",
-                  animation: "word 22s infinite ease-in-out",
-                  animationDelay: "12s",
-                  color: "white",
+                  animation: "word 9s infinite ease-in-out",
+                  animationDelay: "6s",
+                  flexWrap: "wrap",
+
+                  // color: "#687690",
                 }}
               >
                 Passion for possibilities.
               </Title>
-            </div>
+            </Box>
             <Typography
               variant="body2"
               sx={{
                 fontSize: "18px",
-                // color: "#5A6473",
-                color: "white",
+                color: "#5A6473",
+                // color: "white",
                 opacity: 0.8,
                 my: 4,
               }}
             >
               where passion fuels possibilities for women to soar.
             </Typography>
-            <Box sx={{ height: "180px" }}></Box>
+            <Box sx={{ height: "160px" }}></Box>
             <CustomButton
-              // backgroundColor="#0F1B4C"
-              // color="#fff"
-              backgroundColor="white"
-              color="black"
+              backgroundColor="#0F1B4C"
+              color="#fff"
+              // backgroundColor="white"
+              // color="black"
               buttonText="More About Us"
               heroBtn={true}
             />
           </Box>
 
-          <Box sx={{ flex: "1.1", mt: 15 }}>
-            {/* <Lottie loop={true} animationData={HeroAnimation} /> */}
+          <Box
+            sx={{
+              flex: "1",
+              ml: 30,
+              display: { md: "block", sm: "none", xs: "none" },
+            }}
+          >
+            <Lottie loop={true} animationData={HeroAnimation} />
             {/* <img
-              src={heroImg}
+              src={backgroundImage}
               alt="heroImg"
-              style={{ maxWidth: "100%", marginBottom: "2rem" }}
+              style={{
+                maxWidth: "100%",
+                height: "100%",
+                marginBottom: "-10rem",
+                marginLeft: "10rem",
+                //new styles
+                borderRadius: "12px",
+              }}
             /> */}
           </Box>
         </CustomBox>

@@ -1,4 +1,4 @@
-import { Box, styled, keyframes, Typography } from "@mui/material";
+import { Box, styled, keyframes, Typography, Divider } from "@mui/material";
 import React from "react";
 import bedroomsIcon from "../media/bedroomsIcon.png";
 import bathroomsIcon from "../media/bathroomsIcon.png";
@@ -15,28 +15,55 @@ const jiggleAnimation = keyframes`
     transform: translateX(5px);
   }
 `;
+interface IProps {
+  img: string;
+  name: string;
+  vision: string;
+}
+const getRandomLightColor = () => {
+  const randomIndex = Math.floor(Math.random() * lightColors.length);
+  return lightColors[randomIndex];
+};
+const lightColors = [
+  // "rgb(255, 200, 200)", // Light red
+  // "rgb(200, 255, 200)", // Light green
+  "rgb(200, 200, 255)", // Light blue
+];
 
-const House = ({ img, price, address, bedrooms, bathrooms, space }: any) => {
+const House = ({ img, vision, name }: IProps) => {
+  const randomBoxShadowColor = getRandomLightColor();
   const HouseBox = styled(Box)(({ theme }) => ({
-    borderTopLeftRadius: "10px",
-    borderTopRightRadius: "10px",
+    position: "relative",
+    borderRadius: "12px",
     maxWidth: 350,
     margin: "0 auto",
     padding: theme.spacing(2),
-    boxShadow:
-      "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-    backgroundColor: "#fff",
-    border: "1px solid green",
-    transition: "transform 0.3s ease-in-out",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+
+    // border: "1px solid green",
+    height: "26em",
+
+    transition: "all 0.3s ease-in-out",
     scale: 1,
     "&:hover": {
       transform: "scale(1.1)",
-      // animation: "$jiggle 0.3s ease-in-out infinite",
-      // animation: `${jiggleAnimation} 0.3s ease-in-out infinite`,
+      boxShadow: ` -10px 8px 15px ${randomBoxShadowColor},
+    2px 8px 18px ${randomBoxShadowColor}`,
     },
-
     [theme.breakpoints.down("md")]: {
       margin: theme.spacing(2, 0, 2, 0),
+    },
+
+    "&::before": {
+      content: "''",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      borderRadius: "12px",
+      // backgroundColor: "rgba(144, 238, 144, 0.5)",
+      zIndex: -1,
     },
   }));
 
@@ -52,43 +79,74 @@ const House = ({ img, price, address, bedrooms, bathrooms, space }: any) => {
 
   return (
     <HouseBox>
-      {/* <ImgContainer>
-        <img src={img} alt="housePhoto" style={{ maxWidth: "100%" }} />
-      </ImgContainer> */}
       <Box
         style={{
           // maxWidth: "100%",
           width: "20em",
-          border: "2px solid red",
+          // border: "2px solid red",
           // height: "100px",
           display: "flex",
+          justifyContent: "center",
           // justifyContent: "space-between",
+          // borderBottom: "2px solid blue",
           gap: "2em",
           alignItems: "center",
           padding: "10px",
+          // boxShadow: "0 4px 8px rgba(0, 0, 0, 0.05)",
+          borderRadius: "12px",
         }}
       >
         <Box
           sx={{
-            height: "90px",
-            width: "90px",
-            border: "2px solid red",
-            borderRadius: "50%",
+            height: "100px",
+            width: "100px",
           }}
-        ></Box>
-        <Typography variant="h5" sx={{ fontWeight: "700", fontSize: "25px" }}>
-          Name
-        </Typography>
+        >
+          <ImgContainer>
+            <img
+              src={img}
+              alt="housePhoto"
+              style={{ maxWidth: "100%", borderRadius: "50%" }}
+            />
+          </ImgContainer>
+        </Box>
+
+        {/* <Typography variant="h5" sx={{ fontWeight: "700", fontSize: "20px" }}>
+          {name}
+        </Typography> */}
       </Box>
+      <Box sx={{ mt: 2 }}>
+        <Divider
+          variant="middle"
+          textAlign="center"
+          sx={{
+            fontWeight: "bold",
+            textTransform: "uppercase",
+            letterSpacing: "0.8px",
+          }}
+        >
+          {name}
+        </Divider>
+      </Box>
+      {/* <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Divider
+          sx={{
+            bgcolor: "grey",
+            height: "2px",
+            width: "70%",
+            alignSelf: "center",
+          }}
+        />
+      </Box> */}
 
       <Box sx={{ padding: "1rem", height: 300 }}>
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-          delectus? Distinctio hic repellendus est incidunt iusto quae mollitia
-          dolor veniam dolorum, consequatur unde maxime ducimus laudantium.
-          Architecto explicabo tenetur ad illum ullam et, enim vero deserunt
-          modi nihil a odit?
-        </Typography>
+        <Typography>{vision}</Typography>
         {/* <Typography variant="body2" sx={{ fontWeight: "700" }}>
           ${price}
         </Typography>

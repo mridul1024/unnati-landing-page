@@ -1,25 +1,25 @@
-import { useState } from "react";
-import Companies from "./Components/Companies";
 import Guide from "./Components/Guide";
 import Hero from "./Components/Hero";
 import Properties from "./Components/Properties";
 import Details from "./Components/Details";
 import GetStarted from "./Components/GetStarted";
 import Footer from "./Components/Footer";
+import ScrollToTop from "./Components/ScrollToTop";
 // import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <Hero />
-      <Companies />
-      <Guide />
-      <Properties />
-      <Details />
-      <GetStarted />
-      <Footer />
+      <ScrollToTop>
+        <>
+          <Hero />
+          <Guide />
+          <Properties />
+          <Details />
+          <GetStarted />
+          <Footer />
+        </>
+      </ScrollToTop>
     </>
   );
 }
