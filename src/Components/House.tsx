@@ -20,7 +20,6 @@ const House = ({ img, vision, name }: IProps) => {
     margin: "0 auto",
     padding: theme.spacing(2),
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-
     height: "26em",
 
     transition: "all 0.3s ease-in-out",
@@ -73,7 +72,12 @@ const House = ({ img, vision, name }: IProps) => {
             <img
               src={img}
               alt="housePhoto"
-              style={{ width: "6em", height: "6em", borderRadius: "50%" }}
+              style={{
+                width: "6em",
+                height: "6em",
+                borderRadius: "50%",
+                objectFit: "cover",
+              }}
             />
           </ImgContainer>
         </Box>
