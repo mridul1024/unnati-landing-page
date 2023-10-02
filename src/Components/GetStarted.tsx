@@ -33,6 +33,7 @@ const GetStarted = () => {
     <CustomBox>
       <CustomContainer>
         <Box>
+          <div id="contact-us"></div>
           <Typography
             sx={{ fontSize: "35px", color: "white", fontWeight: "700" }}
           >

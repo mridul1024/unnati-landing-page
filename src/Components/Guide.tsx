@@ -86,6 +86,7 @@ const Guide = () => {
             margin: "0 auto",
           }}
         ></div>
+        <div id="about-us"></div>
         <Typography
           variant="h3"
           sx={{ fontSize: "30px", fontWeight: "bold", color: "#000339", my: 3 }}
@@ -121,13 +122,15 @@ const Guide = () => {
             <Typography
               variant="body2"
               sx={{
-                fontWeight: "500",
-                fontSize: "16px",
+                fontWeight: "bold",
+                fontSize: "14px",
+                letterSpacing: "0.8px",
                 color: "#3B3c45",
                 my: 1,
+                textTransform: "uppercase",
               }}
             >
-              Nursing Education and Training:
+              Nursing Education and Training
             </Typography>
             <Box
               sx={{
@@ -150,13 +153,16 @@ const Guide = () => {
             <Typography
               variant="body2"
               sx={{
-                fontWeight: "500",
-                fontSize: "16px",
+                fontWeight: "bold",
+                fontSize: "14px",
+                letterSpacing: "0.8px",
                 color: "#3B3c45",
+                textTransform: "uppercase",
+
                 my: 1,
               }}
             >
-              Community Development and Awareness:
+              Community Development and Awareness
             </Typography>
             <Box
               sx={{
@@ -179,13 +185,16 @@ const Guide = () => {
             <Typography
               variant="body2"
               sx={{
-                fontWeight: "500",
-                fontSize: "16px",
+                fontWeight: "bold",
+                fontSize: "14px",
+                letterSpacing: "0.8px",
                 color: "#3B3c45",
+                textTransform: "uppercase",
+
                 my: 1,
               }}
             >
-              Rural Education Promotion:
+              Rural Education Promotion
             </Typography>
             <Box
               sx={{
@@ -198,12 +207,12 @@ const Guide = () => {
           </GuideBox>
         </GuidesBox>
 
-        <CustomButton
+        {/* <CustomButton
           backgroundColor="#0F1B4C"
           color="#fff"
           buttonText="See Full Guides"
           guideBtn={true}
-        />
+        /> */}
       </Box>
     </>
   );

@@ -8,6 +8,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import { Container } from "@mui/system";
 import UnnatiLogo from "../media/unnati_logo.svg";
+import { useNavigate } from "react-router-dom";
+
 import {
   Drawer,
   List,
@@ -20,9 +22,8 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-const Naveli = ["Home", "About", "Contact", "Events"];
-
-export const Navbar = () => {
+export const Navbar = ({ Naveli, navpath }: any) => {
+  const navigate = useNavigate();
   const [mobileMenu, setMobileMenu] = useState({
     left: false,
   });
@@ -137,11 +138,26 @@ export const Navbar = () => {
           gap={2}
           sx={{ display: { xs: "none", md: "flex" } }}
         >
-          {Naveli.map((item) => {
+          {Naveli?.map((item: any, index: any) => {
             return (
               <NavLink
                 sx={{
                   fontSize: "20px",
+                }}
+                onClick={() => {
+                  if (item === "About") {
+                    const element = document.getElementById("about-us");
+
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  } else if (item === "Contact") {
+                    const element = document.getElementById("contact-us");
+
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  } else navigate(navpath[index]);
                 }}
               >
                 {item}

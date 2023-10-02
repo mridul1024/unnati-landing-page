@@ -2,14 +2,16 @@ import { Box, styled, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import Navbar from "./Navbar";
 import HeroAnimation from "../animation/hero_animation_shooting_blob.json";
+import { useNavigate } from "react-router-dom";
 
 import CustomButton from "./CustomButton";
 import Lottie from "lottie-react";
 
-const Hero = () => {
-  const Naveli = ["Home", "About", "Contact", "Events"];
+const EventsPage = () => {
+  const Naveli = ["Home"];
 
-  const navpath = ["/", "#about-us", "/contacts", "/events"];
+  const navpath = ["/"];
+  const navigate = useNavigate();
   const CustomBox = styled(Box)(({ theme }) => ({
     display: "flex",
     justifyContent: "center",
@@ -85,77 +87,16 @@ const Hero = () => {
                 mb: 4,
               }}
             >
-              Welcome to{" "}
+              {/* Welcome to{" "} */}
               <span
                 style={{
                   color: "#687690",
                   fontWeight: "bold",
                 }}
               >
-                Unnati Foundation,
+                Oops...there are no events at the moment!
               </span>
             </Typography>
-            <Box
-              className="morhping"
-              sx={{
-                flex: 1,
-              }}
-              // style={
-              //   {
-              //     // position: "relative",
-              //     // marginTop: "0px",
-              //     // filter: "contrast(05) ",
-              //   }
-              // }
-            >
-              <Title
-                variant="h1"
-                className="word"
-                sx={{
-                  position: "absolute",
-                  textAlign: "center",
-                  mt: "55px",
-                  animation: "word 9s infinite ease-in-out",
-                  animationDelay: "0s",
-                  flexWrap: "wrap",
-                  // color: "#687690",
-                }}
-              >
-                एक जुनून संभावनाओं का!
-              </Title>
-              <Title
-                variant="h1"
-                className="word"
-                sx={{
-                  position: "absolute",
-                  mt: "65px",
-
-                  animation: "word 9s infinite ease-in-out",
-                  animationDelay: "3s",
-                  flexWrap: "wrap",
-                  textAlign: "center",
-
-                  // color: "#687690",
-                }}
-              >
-                এটি অনুৰাগ সম্ভাবনাৰ
-              </Title>
-              <Title
-                variant="h1"
-                className="word"
-                sx={{
-                  mt: "55px",
-                  textAlign: "center",
-
-                  position: "absolute",
-                  animation: "word 9s infinite ease-in-out",
-                  animationDelay: "6s",
-                  flexWrap: "wrap",
-                }}
-              >
-                Passion for possibilities.
-              </Title>
-            </Box>
             <Typography
               variant="body2"
               sx={{
@@ -165,13 +106,14 @@ const Hero = () => {
                 my: 4,
               }}
             >
-              Fostering boundless opportunities and innovation for all.
+              Click the button below to get redirected...
             </Typography>
             <Box sx={{ height: "160px" }}></Box>
             <CustomButton
               backgroundColor="#0F1B4C"
               color="#fff"
-              buttonText="More About Us"
+              buttonText="Redirect to Home"
+              onClick={() => navigate("/")}
               heroBtn={true}
             />
           </Box>
@@ -191,4 +133,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default EventsPage;

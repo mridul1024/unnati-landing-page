@@ -69,8 +69,8 @@ const ScrollToTop = ({ children }: ScrollToTopProps) => {
                 // background: "rgb(58,180,233, 0.8)",
                 // color: "primary.main",
                 backgroundColor: "white",
-                transform: "scale(1.4)",
-                transition: "all 0.2s ease-out",
+                // transform: "scale(1.4)",
+                // transition: "all 0.2s ease-out",
               },
             }}
             aria-label="scroll back to top"
