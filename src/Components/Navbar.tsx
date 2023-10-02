@@ -64,26 +64,15 @@ export const Navbar = () => {
     </Box>
   );
 
-  const NavLink = styled(Typography)(({ theme }) => ({
+  const NavLink = styled(Typography)(({}) => ({
     fontSize: "14px",
     color: "#4F5361",
-    // color: "white",
     fontWeight: "bold",
     cursor: "pointer",
     border: "2px solid transparent",
     transition: "all 0.3s ease-out",
     "&:hover": {
       borderBottom: "2px solid #4F5361",
-    },
-  }));
-
-  const NavbarLinksBox = styled(Box)(({ theme }) => ({
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: theme.spacing(3),
-    [theme.breakpoints.down("md")]: {
-      display: "none",
     },
   }));
 
@@ -100,10 +89,7 @@ export const Navbar = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    // background: "white",
-    // color: "white",
     borderRadius: "0px 0px 12px 12px",
-    // height: "20px",
     padding: theme.spacing(5),
     [theme.breakpoints.down("md")]: {
       padding: theme.spacing(2),

@@ -1,6 +1,5 @@
 import { styled, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
-import React from "react";
 import houseCard from "../media/hero_background.jpg";
 
 const Details = () => {

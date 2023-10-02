@@ -1,11 +1,9 @@
-import { Box, Button, styled, Typography, Stack } from "@mui/material";
-import React from "react";
+import { Box, styled, Typography } from "@mui/material";
 
 import edu from "../assets/img/undraw-edu.svg";
 import deve from "../assets/img/deve.svg";
 import gar from "../assets/img/gar.svg";
 
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import SouthIcon from "@mui/icons-material/South";
 import CustomButton from "./CustomButton";
 
@@ -46,7 +44,6 @@ const Guide = () => {
     <>
       <Box
         sx={{
-          // width: "100vw",
           textAlign: "center",
           height: "5rem",
           mt: 4,
@@ -56,9 +53,7 @@ const Guide = () => {
               opacity: 1,
             },
             "50%": {
-              // filter: "blur(5px)",
               opacity: 0,
-              // color: "#687690",
             },
             "100%": {
               opacity: 1,
@@ -141,15 +136,7 @@ const Guide = () => {
                 justifyContent: "center",
                 alignItems: "center",
               }}
-            >
-              {/* <Typography
-              variant="body2"
-              sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF" }}
-            >
-            sfd
-            </Typography>
-            <ArrowRightAltIcon style={{ color: "#0689FF" }} /> */}
-            </Box>
+            ></Box>
           </GuideBox>
 
           <GuideBox>
@@ -178,15 +165,7 @@ const Guide = () => {
                 justifyContent: "center",
                 alignItems: "center",
               }}
-            >
-              {/* <Typography
-              variant="body2"
-              sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF" }}
-            >
-              How to rent
-            </Typography>
-            <ArrowRightAltIcon style={{ color: "#0689FF" }} /> */}
-            </Box>
+            ></Box>
           </GuideBox>
 
           <GuideBox>
@@ -215,15 +194,7 @@ const Guide = () => {
                 justifyContent: "center",
                 alignItems: "center",
               }}
-            >
-              {/* <Typography
-              variant="body2"
-              sx={{ fontWeight: "bold", fontSize: "14px", color: "#0689FF" }}
-              >
-              How to sell
-            </Typography>
-            <ArrowRightAltIcon style={{ color: "#0689FF" }} /> */}
-            </Box>
+            ></Box>
           </GuideBox>
         </GuidesBox>
 

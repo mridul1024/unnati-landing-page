@@ -1,6 +1,5 @@
-import { Button, Stack, styled, TextField, Typography } from "@mui/material";
+import { Stack, styled, TextField, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
-import React from "react";
 import homeIllustration from "../media/illustration.png";
 import CustomButton from "./CustomButton";
 import emailjs from "@emailjs/browser";
@@ -69,13 +68,6 @@ const GetStarted = () => {
               InputLabelProps={{ shrink: true }}
             />
           </Stack>
-
-          {/*           
-          <Typography
-            sx={{ fontSize: "16px", color: "#ccc", fontWeight: "500", my: 3 }}
-          >
-            Everything you need to know about houses!
-          </Typography> */}
 
           <CustomButton
             backgroundColor="#fff"

@@ -1,14 +1,10 @@
-import { Box, Button, styled, Typography } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import { Container } from "@mui/system";
-import React from "react";
 import Navbar from "./Navbar";
 import HeroAnimation from "../animation/hero_animation_shooting_blob.json";
 
-import heroImg from "../media/hero_illustration_girls.png";
-import backgroundImage from "../media/hero_background_dark.jpeg";
 import CustomButton from "./CustomButton";
 import Lottie from "lottie-react";
-import UnnatiLogo from "../media/unnati_logo.svg";
 
 const Hero = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
@@ -45,14 +41,6 @@ const Hero = () => {
       },
     },
   }));
-
-  const backgroundStyle = {
-    backgroundImage: `url(${backgroundImage})`, // Set the background image
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    // backdropFilter: "blur(10px)",
-    filter: "blur(5px)",
-  };
 
   return (
     <Box
@@ -160,8 +148,6 @@ const Hero = () => {
                   animation: "word 9s infinite ease-in-out",
                   animationDelay: "6s",
                   flexWrap: "wrap",
-
-                  // color: "#687690",
                 }}
               >
                 Passion for possibilities.
@@ -172,7 +158,6 @@ const Hero = () => {
               sx={{
                 fontSize: "18px",
                 color: "#5A6473",
-                // color: "white",
                 opacity: 0.8,
                 my: 4,
               }}
@@ -183,8 +168,6 @@ const Hero = () => {
             <CustomButton
               backgroundColor="#0F1B4C"
               color="#fff"
-              // backgroundColor="white"
-              // color="black"
               buttonText="More About Us"
               heroBtn={true}
             />
@@ -198,18 +181,6 @@ const Hero = () => {
             }}
           >
             <Lottie loop={true} animationData={HeroAnimation} />
-            {/* <img
-              src={backgroundImage}
-              alt="heroImg"
-              style={{
-                maxWidth: "100%",
-                height: "100%",
-                marginBottom: "-10rem",
-                marginLeft: "10rem",
-                //new styles
-                borderRadius: "12px",
-              }}
-            /> */}
           </Box>
         </CustomBox>
       </Container>

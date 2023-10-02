@@ -1,7 +1,5 @@
 import { Box, Container, styled, Typography } from "@mui/material";
-import React from "react";
 import House from "./House";
-import { properties } from "../properties";
 import { visionStatements } from "../../Founder";
 
 const Properties = () => {
@@ -15,12 +13,6 @@ const Properties = () => {
     },
   }));
 
-  const PropertiesTextBox = styled(Box)(({ theme }) => ({
-    [theme.breakpoints.down("md")]: {
-      textAlign: "center",
-    },
-  }));
-
   const CustomBox = styled(Box)(({ theme }) => ({
     width: "30%",
     [theme.breakpoints.down("md")]: {
@@ -31,25 +23,12 @@ const Properties = () => {
   return (
     <Box sx={{ mt: 5, backgroundColor: "#F5FAFE", py: 10 }}>
       <Container>
-        {/* <PropertiesTextBox>
-          <Typography
-            sx={{ color: "#000339", fontSize: "35px", fontWeight: "bold" }}
-          >
-            Founding Members
-          </Typography>
-          <Typography sx={{ color: "#5A6473", fontSize: "16px", mt: 1 }}>
-            Leadership in Action: Introducing the Visionary Minds Guiding the
-            Foundation
-          </Typography>
-        </PropertiesTextBox> */}
-
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            // mt: "14em",
           }}
         >
           <div
