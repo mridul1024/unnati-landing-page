@@ -121,7 +121,7 @@ const Hero = () => {
                   // color: "#687690",
                 }}
               >
-                एक जुनून संभावनाओं का!
+                एक जुनून संभावनाओं का !
               </Title>
               <Title
                 variant="h1"
@@ -138,7 +138,7 @@ const Hero = () => {
                   // color: "#687690",
                 }}
               >
-                এটি অনুৰাগ সম্ভাবনাৰ
+                সম্ভাবনাৰ এটি অনুৰাগ !
               </Title>
               <Title
                 variant="h1"
@@ -153,7 +153,7 @@ const Hero = () => {
                   flexWrap: "wrap",
                 }}
               >
-                Passion for possibilities.
+                Passion for possibilities !
               </Title>
             </Box>
             <Typography
